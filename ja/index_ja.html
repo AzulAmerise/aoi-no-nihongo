@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>翻訳と言語教育</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <div>
+        <img src="../tu-logo.jpg" alt="ロゴ"  style="height: 50px;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index_ja.html">ホーム</a></li>
+        <li><a href="quien-soy_ja.html">私について</a></li>
+        <li><a href="servicios_ja.html">サービス</a></li>
+        <li><a href="especializacion_ja.html">専門分野</a></li>
+        <li><a href="contacto_ja.html">お問い合わせ</a></li>
+        <li>
+          <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="ja" selected>日本語</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner principal -->
+    <section class="banner">
+      <img src="../assets/banner.jpg" alt="プロフィール画像" />
+    </section>
+
+    <!-- Sección de artículos tipo portafolio -->
+    <section id="articulos">
+      <h2>記事とポートフォリオ</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+          <h3>記事タイトル1</h3>
+          <p>簡単な説明...</p>
+          <a href="articulo1_ja.html">続きを読む</a>
+        </article>
+        <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+          <h3>記事タイトル2</h3>
+          <p>簡単な説明...</p>
+          <a href="articulo2_ja.html">続きを読む</a>
+        </article>
+        <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+          <h3>記事タイトル3</h3>
+          <p>簡単な説明...</p>
+          <a href="articulo3_ja.html">続きを読む</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - 翻訳と言語教育</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/index.html',
+        'en': '../en/index_en.html',
+        'ja': '../ja/index_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+  
+</body>
+</html>

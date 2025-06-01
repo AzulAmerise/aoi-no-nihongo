@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Translation and Language Teaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+</head>
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <div>
+        <img src="../tu-logo.jpg" alt="Logo" style="height: 50px;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="about_en.html">About Me</a></li>
+        <li><a href="services_en.html">Services</a></li>
+        <li><a href="specialization_en.html">Specializations</a></li>
+        <li><a href="contact_en.html">Contact</a></li>
+        <li>
+          <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="ja" selected>日本語</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Services</h2>
+      <p>write here</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Aoi no nihongo - Translation and Language Teaching</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/index.html',
+        'en': '../en/index_en.html',
+        'ja': '../ja/index_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+</body>
+</html>

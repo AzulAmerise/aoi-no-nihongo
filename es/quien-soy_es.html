@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre mí - Traducción y Enseñanza de Idiomas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <div>
+        <img src="../tu-logo.jpg" alt="logo" style="height: 50px;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy_es.html">Quién soy</a></li>
+        <li><a href="servicios_es.html">Servicios</a></li>
+        <li><a href="Blog_es.html">Blog</a></li>
+        <li><a href="contacto_es.html">Contacto</a></li>
+        <li>
+          <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre-mi" style="padding: 2rem 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+          <h1>
+            Sobre mí
+          </h1>
+        </div>
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+          <!-- Foto tuya -->
+          <img src="../tu-foto.jpg" alt="Foto de Azul" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;" />
+      
+          <!-- Texto -->
+          <div style="flex: 1; min-width: 300px;">
+            <p>
+              ¡Hola! Soy Azul, traductora pública en idioma inglés matriculada con una gran pasión por la comunicación intercultural. 
+              Desde que me gradué de la universidad me dediqué a seguir perfeccionándome para poder ayudar a personas y empresas a superar barreras lingüísticas y culturales. 
+            </p>
+            <p>
+              Trabajo profesionalmente como traductora de japonés, inglés y español, especializándome en áreas como las nuevas tecnologías, el marketing y los videojuegos. 
+              También soy profesora de japonés con experiencia enseñando a estudiantes de distintos niveles, desde N5 hasta N3, y actualmente me estoy preparando para rendir el examen JLPT N2. 
+            </p>
+            <p>
+              He trabajado en el área de traducción, transcreación y localización, y actualmente ofrezco mis servicios tanto a particulares como a empresas. Tengo una conexión muy cercana con Japón, tanto a nivel profesional como personal, y una profunda admiración por su idioma y su cultura. 
+              Mi mayor pasión dentro de la traducción es crear puentes entre lenguas y culturas: construir caminos claros, precisos y humanos para que las personas puedan cruzarlos y encontrarse con nuevas realidades, ideas y formas de pensar. 
+            </p>
+            <p> Si te interesa el idioma japonés, la traducción o la cultura japonesa, te invito a visitar mi blog.
+              Allí comparto recursos, reflexiones y experiencias pensadas para estudiantes, curiosos y amantes de los idiomas que, como yo, disfrutan aprendiendo y conectando con otras formas de ver el mundo. </p>
+            </p>
+          </div>
+        </div>
+   </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Aoi no nihongo - Traducción y Enseñanza de Idiomas</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/quien-soy_es.html',
+        'en': '../en/about_en.html',
+        'ja': '../ja/quien-soy_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+</body>
+</html>

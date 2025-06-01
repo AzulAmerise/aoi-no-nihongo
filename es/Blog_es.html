@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Traducción y Enseñanza de Idiomas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+  
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <div>
+        <img src="../tu-logo.jpg" alt="Logo" style="height: 50px;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy_es.html">Quién soy</a></li>
+        <li><a href="servicios_es.html">Servicios</a></li>
+        <li><a href="Blog_es.html">Blog</a></li>
+        <li><a href="contacto_es.html">Contacto</a></li>
+        <li>
+          <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Blog</h1>
+      <p>¡Bienvenido! En esta sección vas a encontrar diferentes artículos publicados por mí para conmpartir mi camino por este </p>
+    </section>
+      
+    <!-- Sección de artículos tipo portafolio -->
+        <section id="articulos">
+          <h2>Artículos para leer más sobre el japonés y sobre mí</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+            <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+              <h3 class="text-center">La historia de mi amor por el japonés</h3>
+              <p class="text-center">El día que todo comenzón y cambio mi vida para siempre...</p>
+              <a href="blogs\Articulo-1.html">Leer más</a>
+            </article>
+            <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+              <h3>Título del Artículo 2</h3>
+              <p>Descripción breve...</p>
+              <a href="articulo2.html">Leer más</a>
+            </article>
+            <article style="border: 1px solid var(--rosa-principal); padding: 1rem; border-radius: 8px;">
+              <h3>Título del Artículo 3</h3>
+              <p>Descripción breve...</p>
+              <a href="articulo3.html">Leer más</a>
+            </article>
+          </div>
+        </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Aoi no nihongo - Traducción y Enseñanza de Idiomas</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/Blog_es.html',
+        'en': '../en/Blog_en.html',
+        'ja': '../ja/Blog_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+</body>
+</html>

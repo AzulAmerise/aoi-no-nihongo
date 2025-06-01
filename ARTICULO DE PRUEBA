@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La historia de mi amor por el japonés</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-art.css" />
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrapper">
+          <div>
+            <img src="../tu-logo.jpg" alt="Logo" style="height: 50px;" />
+          </div>
+          <ul class="nav-menu">
+            <li><a href="..\index.html">Inicio</a></li>
+            <li><a href="..\quien-soy_es.html">Quién soy</a></li>
+            <li><a href="..\servicios_es.html">Servicios</a></li>
+            <li><a href="..\Blog_es.html">Blog</a></li>
+            <li><a href="..\contacto_es.html">Contacto</a></li>
+            <li>
+              <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+  <main class="articulo-wrapper">
+    <h1>La historia de mi amor por el japonés</h1>
+    <p class="fecha-publicacion">Publicado el: 31 de mayo de 2025</p>
+
+    <img src="../assets/imagen-ejemplo.jpg" alt="Descripción de la imagen">
+
+    <p>¡Hola! Soy Aoi, disfruto mucho de aprender idiomas, de enseñarlos y de poder utilizarlos como puentes entre culturas. Les doy la bienvenida a mi blog, donde compartiré consejos, recursos y experiencias para aprender y disfrutar los idiomas que yo hablo. 
+        En este primer posteo, me gustaría compartirles mi recorrido aprendiendo japonés, cómo logré aprenderlo y qué es lo que hago con este. Cualquier pregunta que tengan me la pueden enviar a mi mail o a mi Instagram ¡Espero que lo disfruten!</p>
+
+    <p>Podés incluir links útiles como este: <a href="https://ejemplo.com" target="_blank">Recurso recomendado</a>.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_VIDEO_ID" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+
+    <p>Más texto, reflexiones, análisis o contenido educativo que quieras desarrollar. Usá títulos y subtítulos si querés organizar la información.</p>
+
+    <a class="volver-blog" href="index.html">← Volver al blog</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Aoi no nihongo - Traducción y Enseñanza de Idiomas</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/Articulo-1.html',
+        'en': '../en/Articulo-1_en.html',
+        'ja': '../ja/Articulo-1_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+
+</body>
+</html>

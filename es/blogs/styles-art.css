@@ -1,0 +1,123 @@
+:root {
+    --rosa-principal: #D97694;
+    --rosa-claro: #FAC7D6;
+    --rosa-oscuro: #BE5A79;
+    --blanco: #FFFFFF;
+    --azul-oscuro: #242E4F;
+  
+    --font-titulo: 'Bebas Neue', sans-serif;
+    --font-subtitulo: 'Helvetica', sans-serif;
+    --font-base: 'Helvetica', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-base);
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--azul-oscuro);
+    padding: 1rem;
+    color: var(--blanco);
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li a,
+  .nav-menu select {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    font-family: var(--font-subtitulo);
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  h1, h2 {
+    color: var(--rosa-principal);
+  }
+  
+  h1 {
+    font-family: var(--font-titulo);
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-family: var(--font-subtitulo);
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  form label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--rosa-oscuro);
+    border-radius: 4px;
+    font-family: var(--font-base);
+  }
+  
+  button {
+    background-color: var(--rosa-principal);
+    color: var(--negro);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--rosa-oscuro);
+  }
+  
+  footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  .article-body {
+    line-height: 1.7;
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+    text-align: justify;
+  }
+  
+  .article-body img {
+    max-width: 90%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .text-center {
+    text-align: center;
+  }

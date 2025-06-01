@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicio - Traducción y Enseñanza de Idiomas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <style>
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #languageSwitcher {
+      background-color: var(--rosa-principal);
+      color: var(--blanco);
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-family: var(--font-subtitulo);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+</head>
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <div>
+        <img src="../tu-logo.jpg"  alt="Logo" style="height: 50px;" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy_es.html">Quién soy</a></li>
+        <li><a href="servicios_es.html">Servicios</a></li>
+        <li><a href="Blog_es.html">Blog</a></li>
+        <li><a href="contacto_es.html">Contacto</a></li>
+        <li>
+          <select id="languageSwitcher" onchange="cambiarIdioma(this.value)">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="servicios_es">
+      <h1>Mis servicios</h1>
+        <h2>🌐 Traducción profesional</h2>
+        <p>Traducción escrita entre japonés, inglés y español, con enfoque en precisión, naturalidad y fidelidad al contexto cultural.</p>
+        <ul>
+          <li>Textos técnicos y especializados</li>
+          <li>Localización de contenidos digitales</li>
+          <li>Traducción de material educativo, publicitario o audiovisual</li>
+        </ul>
+      
+        <h2>📘 Clases de japonés personalizadas</h2>
+        <p>Clases en línea adaptadas a tu nivel y objetivos. Trabajo con estudiantes de todo el mundo que se preparan para el JLPT (N5, N4, N3) o que simplemente desean aprender japonés para comunicarse con fluidez.</p>
+        <ul>
+          <li>Materiales interactivos y actualizados</li>
+          <li>Enfoque comunicativo y estructurado</li>
+          <li>Apoyo constante y seguimiento personalizado</li>
+        </ul>
+      
+        <h2>📄 Corrección y revisión de textos</h2>
+        <p>Revisión ortográfica, gramatical y de estilo para textos en español, inglés o japonés. Ideal para trabajos académicos, correos profesionales, artículos y más.</p>
+      
+        <h2>🎓 Asesoría lingüística</h2>
+        <p>Consultoría para proyectos multilingües, ayuda con estudios de japonés, y orientación para quienes quieren vivir, estudiar o trabajar en Japón.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Aoi no nihongo - Traducción y Enseñanza de Idiomas</p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(valor) {
+      const ruta = {
+        'es': '../es/servicios_es.html',
+        'en': '../en/services_en.html',
+        'ja': '../ja/servicios_ja.html'
+      };
+      window.location.href = ruta[valor];
+    }
+  </script>
+</body>
+</html>
